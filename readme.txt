@@ -11,7 +11,7 @@ Detects shortcodes before wp_head() call.
 
 == Description ==
 
-Detects shortcodes before wp_head() call to allow selective enqueuing of scripts and styles (i.e. js and css files) that are specifically used for shortcode.
+Detects shortcodes before wp_head() call to allow selective enqueuing of scripts and styles (i.e. js and css files) that are specifically used for the shortcode.
 
 = How to use the plugin? =
 
