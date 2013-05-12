@@ -4,7 +4,7 @@
     * Plugin Name: Shortcode Detector
     * Plugin URI: http://apocalypseboy.com/
     * Description: Detects shortcodes before wp_head() call to allow selective enqueuing of scripts and styles (i.e. js and css files) that are specifically used for shortcode.
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: ApocalypseBoy
     * Author URI: http://apocalypseboy.com/
     */
@@ -16,6 +16,9 @@
         
         function detect_shortcodes() { 
             global $posts;
+            
+            if ( is_admin() )
+                return;
             
             $pattern = get_shortcode_regex();
             $shortcode_matches = array();
